@@ -28,7 +28,7 @@ export default class LineHeightUI extends Plugin {
 			dropdownView.buttonView.set({
 				label: t('Line Height'),
 				icon: lineHeightIcon,
-				tooltip: true
+				tooltip: false
 			});
 
 			dropdownView.extendTemplate({
