@@ -23,7 +23,7 @@
     "yarn": ">=1.12.0"
   },
   "author": "vdfor",
-  "license": "MIT",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/vdfor/ckeditor5-line-height",
   "bugs": "https://github.com/vdfor/ckeditor5-line-height/issues",
   "repository": {

@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import LineHeightEditing from './lineheight/lineheightediting';
-import LineHeightUI from './lineheight/lineheightui';
+import LineHeightEditing from './lineheightediting';
+import LineHeightUI from './lineheightui';
 
 export default class LineHeight extends Plugin {
 	/**
