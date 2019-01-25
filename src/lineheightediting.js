@@ -11,13 +11,13 @@ export default class LineHeightEditing extends Plugin {
 
 		editor.config.define( LINE_HEIGHT, {
 			options: [
-				'1',
-				'1.25',
-				'1.5',
-				'1.75',
-				'2',
-				'2.25',
-				'2.5'
+				1,
+				1.25,
+				1.5,
+				1.75,
+				2,
+				2.25,
+				2.5
 			]
 		} );
 	}

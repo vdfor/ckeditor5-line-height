@@ -94,7 +94,10 @@ function _prepareListOptions(options, command) {
 			def.model.set('class', `${def.model.class} ${option.view.classes}`);
 		}
 
-		def.model.bind('isOn').to(command, 'value', value => value === option.model);
+		def.model.bind('isOn').to(command, 'value', value => {
+			const newValue = value ? parseFloat(value) : value;
+			return newValue === option.model;
+		});
 
 		// Add the option to the collection.
 		itemDefinitions.add(def);
