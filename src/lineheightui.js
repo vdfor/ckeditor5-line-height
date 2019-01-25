@@ -28,7 +28,7 @@ export default class LineHeightUI extends Plugin {
 			dropdownView.buttonView.set({
 				label: t('Line Height'),
 				icon: lineHeightIcon,
-				tooltip: show
+				tooltip: true
 			});
 
 			dropdownView.extendTemplate({
@@ -55,7 +55,22 @@ export default class LineHeightUI extends Plugin {
 		const editor = this.editor;
 		const t = editor.t;
 
-		return normalizeOptions(editor.config.get('lineHeight.options'));
+		const localizedTitles = {
+			Default: t('Default')
+		};
+
+		const options = normalizeOptions(editor.config.get('lineHeight.options'));
+
+		return options.map(option => {
+			const title = localizedTitles[option.title];
+
+			if (title && title != option.title) {
+				// Clone the option to avoid altering the original `namedPresets` from `./utils.js`.
+				option = Object.assign({}, option, { title });
+			}
+
+			return option;
+		});
 	}
 }
 

@@ -8,3 +8,7 @@ msgstr ""
 msgctxt "Tooltip for the line height dropdown."
 msgid "Line Height"
 msgstr "Line Height"
+
+msgctxt "Dropdown option label for the default line height."
+msgid "Default"
+msgstr "Default"
